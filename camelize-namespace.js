@@ -17,7 +17,24 @@
 	@end-module-documentation
 */
 var camelizeNamespace = function camelizeNamespace( namespace ){
+	/*:
+		@meta-configuration:
+			{
+				"namespace:required": "string"
+			}
+		@end-meta-configuration
+	*/
 
+	if( NAMESPACE_PATTERN.test( namespace ) ){
+
+	}else{
+		var error = new Error( "invalid namespace format" );
+		console.error( error );
+		throw error;
+	}
 };
+
+const NAMESPACE_PATTERN = /^(?:[a-zA-Z][a-zA-Z0-9]+[-_ ])*[a-zA-Z][a-zA-Z0-9]+$/;
+const NAMESPACE_TERM_PATTERN = /^([a-zA-Z])|[-_ ]([a-zA-Z])/;
 
 ( module || { } ).exports = camelizeNamespace;
