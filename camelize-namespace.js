@@ -52,7 +52,7 @@ var camelizeNamespace = function camelizeNamespace( namespace, doNotCamelizeFirs
 	}
 };
 
-const NAMESPACE_PATTERN = /^(?:[a-zA-Z][a-zA-Z0-9]+[-_ ])*[a-zA-Z][a-zA-Z0-9]+$/;
+const NAMESPACE_PATTERN = /^(?:[a-zA-Z][a-zA-Z0-9]*[-_ ])*[a-zA-Z][a-zA-Z0-9]*$/;
 const NAMESPACE_TERM_PATTERN = /^[a-zA-Z]|([-_ ])[a-zA-Z]/g;
 const FIRST_LETTER_PATTERN = /^[a-zA-Z]/;
 
